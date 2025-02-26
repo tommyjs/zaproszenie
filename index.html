@@ -17,7 +17,7 @@
             color: #333;
         }
         .section {
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -27,20 +27,37 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
-        h1, h2 {
+        h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a202c;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
         img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .hero {
             background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ogolne.jpg-7ZX5D41Y2eHNwQshvypjSFrym4phcu.jpeg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
             text-align: center;
             position: relative;
@@ -60,7 +77,7 @@
         }
         .grid {
             display: grid;
-            gap: 2rem;
+            gap: 3rem;
         }
         @media (min-width: 768px) {
             .grid-2 {
@@ -74,7 +91,7 @@
             text-align: center;
         }
         .mb-4 {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .icon {
             width: 24px;
@@ -82,13 +99,42 @@
             vertical-align: middle;
             margin-right: 0.5rem;
         }
+        .info-block {
+            background-color: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .celebration-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .celebration-item:hover {
+            transform: translateY(-5px);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4a5568;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2d3748;
+        }
     </style>
 </head>
 <body>
     <section class="section hero">
         <div class="hero-content">
             <h1>Wielkanocna uroczystość rodzinna</h1>
-            <p>20.04.2025</p>
+            <p style="font-size: 1.5rem;">20.04.2025</p>
         </div>
     </section>
 
@@ -97,7 +143,7 @@
             <div>
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zuzia.jpg-Id9AhPYw9BfanzsFG1DQFeY1JOgYhP.jpeg" alt="Zuzanna">
             </div>
-            <div>
+            <div class="info-block">
                 <h2>Chrzest Święty Zuzanny</h2>
                 <p>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +167,7 @@
 
     <section class="section" style="background-color: #f8f8f8;">
         <div class="container grid grid-2">
-            <div>
+            <div class="info-block">
                 <h2>Przyjęcie w Restauracji Farbiarnia</h2>
                 <p>
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -148,18 +194,18 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Świętujemy również...</h2>
+            <h2 class="text-center mb-4">Świętujemy również...</h2>
             <div class="grid grid-3">
-                <div class="text-center">
+                <div class="celebration-item text-center">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ignas.jpg-KmsAiDCbTLJ12EAUVk1pMZTbgdDrWM.jpeg" alt="Birthday celebration" class="mb-4">
                     <h3>Urodziny Ignasia</h3>
                     <p>15:00 - 16:00</p>
                 </div>
-                <div class="text-center">
+                <div class="celebration-item text-center">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jagna.jpg-h5CpISVcTcgIlsVXSrBR91eZo4zIoB.jpeg" alt="Jagna" class="mb-4">
                     <h3>Imieniny Jagny</h3>
                 </div>
-                <div class="text-center">
+                <div class="celebration-item text-center">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aga.jpg-DOyxcsKI75FRT4320ytfwXtRH1V4n6.jpeg" alt="Aga" class="mb-4">
                     <h3>Imieniny Agi</h3>
                 </div>
@@ -172,12 +218,13 @@
             <div>
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/figloraj-rEOXJdN1EVgEv4Y9K2UWwwIPbroCfX.jpeg" alt="Kids play area">
             </div>
-            <div>
+            <div class="info-block">
                 <h2>Strefa dla dzieci</h2>
                 <p>
                     Dla najmłodszych przygotowaliśmy specjalną strefę zabaw - Figloraj!
                     Prosimy o zabranie wygodnego ubrania dla dzieci.
                 </p>
+                <a href="#" class="btn">Dowiedz się więcej</a>
             </div>
         </div>
     </section>
@@ -185,14 +232,14 @@
     <section class="section">
         <div class="container text-center">
             <h2>10 lat razem!</h2>
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-lecie.jpg-jHrImNxrR4iD5hg9ed0VEJRYvvnO07.jpeg" alt="10th wedding anniversary">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-lecie.jpg-jHrImNxrR4iD5hg9ed0VEJRYvvnO07.jpeg" alt="10th wedding anniversary" style="max-width: 600px;">
         </div>
     </section>
 
     <section class="section" style="background-color: #f8f8f8;">
         <div class="container text-center">
             <h2>Dziękujemy za przybycie!</h2>
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zakonczenie.jpg-OpFUSbm2otchnyPWBpyczf2jzmjs0e.jpeg" alt="Thank you">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zakonczenie.jpg-OpFUSbm2otchnyPWBpyczf2jzmjs0e.jpeg" alt="Thank you" style="max-width: 600px;">
         </div>
     </section>
 </body>
